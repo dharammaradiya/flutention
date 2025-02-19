@@ -1,0 +1,20 @@
+name: flutention
+description: "A collection of Flutter extensions"
+version: 0.0.1
+# homepage: "https://github.com/yourusername/flutter_extensions"
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_animate: ^4.5.2
+  flutter_staggered_animations: ^1.1.1
+  intl: ^0.20.2
+  shimmer: ^3.0.0
+  svg_flutter: ^0.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
