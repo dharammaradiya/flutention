@@ -1,7 +1,7 @@
 name: flutention
 description: "A collection of Flutter extensions"
 version: 0.0.1
-# homepage: "https://github.com/yourusername/flutter_extensions"
+homepage: "https://github.com/dharammaradiya/flutention"
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
