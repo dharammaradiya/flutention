@@ -1,2 +1,2 @@
-## 0.0.1
-- Initial release.
+## 0.0.3
+- Change my readme file and adjust version 
