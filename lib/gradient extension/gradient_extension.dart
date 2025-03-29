@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 
 extension GradientExtensions on Gradient {
   static LinearGradient createLinearGradient(
-    Color color1, 
+    Color color1,
     Color color2, {
     Alignment begin = Alignment.topLeft,
     Alignment end = Alignment.bottomRight,
     int stops = 2,
   }) {
     List<Color> colors = [color1, color2];
-    List<double> stopsList = List.generate(stops, (index) => index / (stops - 1));
+    List<double> stopsList =
+        List.generate(stops, (index) => index / (stops - 1));
 
     return LinearGradient(
       colors: colors,
-      stops: stopsList.length == colors.length ? stopsList : null,  // Ensure same length
+      stops: stopsList.length == colors.length
+          ? stopsList
+          : null, // Ensure same length
       begin: begin,
       end: end,
     );
@@ -27,11 +30,14 @@ extension GradientExtensions on Gradient {
     int stops = 2,
   }) {
     List<Color> colors = [color1, color2];
-    List<double> stopsList = List.generate(stops, (index) => index / (stops - 1));
+    List<double> stopsList =
+        List.generate(stops, (index) => index / (stops - 1));
 
     return RadialGradient(
       colors: colors,
-      stops: stopsList.length == colors.length ? stopsList : null,  // Ensure same length
+      stops: stopsList.length == colors.length
+          ? stopsList
+          : null, // Ensure same length
       center: center,
       radius: radius,
     );
@@ -42,15 +48,18 @@ extension GradientExtensions on Gradient {
     Color color2, {
     Alignment center = Alignment.center,
     double startAngle = 0.0,
-    double endAngle = 6.28, 
+    double endAngle = 6.28,
     int stops = 2,
   }) {
     List<Color> colors = [color1, color2];
-    List<double> stopsList = List.generate(stops, (index) => index / (stops - 1));
+    List<double> stopsList =
+        List.generate(stops, (index) => index / (stops - 1));
 
     return SweepGradient(
       colors: colors,
-      stops: stopsList.length == colors.length ? stopsList : null,  // Ensure same length
+      stops: stopsList.length == colors.length
+          ? stopsList
+          : null, // Ensure same length
       center: center,
       startAngle: startAngle,
       endAngle: endAngle,
@@ -64,7 +73,7 @@ extension GradientExtensions on Gradient {
     List<double>? stops,
   }) {
     if (stops != null && stops.length != colors.length) {
-      stops = null;  // Reset stops if not matching colors length
+      stops = null; // Reset stops if not matching colors length
     }
     return LinearGradient(
       colors: colors,
@@ -89,32 +98,38 @@ extension GradientExtensions on Gradient {
   }
 
   static LinearGradient createDiagonalGradient(
-    Color color1, 
+    Color color1,
     Color color2, {
     int stops = 2,
   }) {
     List<Color> colors = [color1, color2];
-    List<double> stopsList = List.generate(stops, (index) => index / (stops - 1));
+    List<double> stopsList =
+        List.generate(stops, (index) => index / (stops - 1));
 
     return LinearGradient(
       colors: colors,
-      stops: stopsList.length == colors.length ? stopsList : null,  // Ensure same length
+      stops: stopsList.length == colors.length
+          ? stopsList
+          : null, // Ensure same length
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     );
   }
 
   static LinearGradient createColorFilterGradient(
-    Color color1, 
+    Color color1,
     Color color2, {
     int stops = 2,
   }) {
     List<Color> colors = [color1, color2];
-    List<double> stopsList = List.generate(stops, (index) => index / (stops - 1));
+    List<double> stopsList =
+        List.generate(stops, (index) => index / (stops - 1));
 
     return LinearGradient(
       colors: colors,
-      stops: stopsList.length == colors.length ? stopsList : null,  // Ensure same length
+      stops: stopsList.length == colors.length
+          ? stopsList
+          : null, // Ensure same length
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     );

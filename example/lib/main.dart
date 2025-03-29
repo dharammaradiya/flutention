@@ -50,7 +50,7 @@ List extentions = [
   "Integer Extensions",
   "String Extensions",
   "Date Time Extentions"
-  "Gradient Extensions",
+      "Gradient Extensions",
   "Navigation Transition Extensions",
   "Custom Container Example",
   "List Animation Example",

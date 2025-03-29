@@ -232,7 +232,8 @@ class BounceInUp extends StatelessWidget {
   final Animation<double> animation;
   final Widget child;
 
-  const BounceInUp({Key? key, required this.animation, required this.child}) : super(key: key);
+  const BounceInUp({Key? key, required this.animation, required this.child})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

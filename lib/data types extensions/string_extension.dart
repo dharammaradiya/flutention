@@ -10,19 +10,20 @@ extension StringExtensions on String {
   bool get isNullOrBlank => this.trim().isEmpty;
 
   // 3. Capitalizes the first letter of the string
-  String get capitalize => this.isEmpty ? '' : this[0].toUpperCase() + this.substring(1);
+  String get capitalize =>
+      this.isEmpty ? '' : this[0].toUpperCase() + this.substring(1);
 
   // 4. Converts a string to camel case (first word in lowercase, subsequent words capitalized)
   String get toCamelCase {
-    return this
-        .replaceAllMapped(RegExp(r'(_\w)'), (match) => match.group(0)!.substring(1).toUpperCase());
+    return this.replaceAllMapped(RegExp(r'(_\w)'),
+        (match) => match.group(0)!.substring(1).toUpperCase());
   }
 
   // 5. Converts a string to snake case (lowercase with underscores between words)
   String get toSnakeCase {
     return this
-        .replaceAllMapped(
-            RegExp(r'([a-z])([A-Z])'), (match) => '${match.group(1)}_${match.group(2)}')
+        .replaceAllMapped(RegExp(r'([a-z])([A-Z])'),
+            (match) => '${match.group(1)}_${match.group(2)}')
         .toLowerCase();
   }
 
@@ -34,8 +35,8 @@ extension StringExtensions on String {
 
   // 7. Validates if the string is a valid phone number
   bool get isPhoneNumber {
-    final regex =
-        RegExp(r'^\+?(\d{1,3})?[-. ]?\(?\d{1,4}?\)?[-. ]?\d{1,4}[-. ]?\d{1,4}[-. ]?\d{1,9}$');
+    final regex = RegExp(
+        r'^\+?(\d{1,3})?[-. ]?\(?\d{1,4}?\)?[-. ]?\d{1,4}[-. ]?\d{1,4}[-. ]?\d{1,9}$');
     return regex.hasMatch(this);
   }
 
@@ -48,7 +49,9 @@ extension StringExtensions on String {
   // 10. Converts a string to title case (capitalizes the first letter of each word)
   String get toTitleCase {
     return this.split(' ').map((word) {
-      return word.isEmpty ? word : word[0].toUpperCase() + word.substring(1).toLowerCase();
+      return word.isEmpty
+          ? word
+          : word[0].toUpperCase() + word.substring(1).toLowerCase();
     }).join(' ');
   }
 

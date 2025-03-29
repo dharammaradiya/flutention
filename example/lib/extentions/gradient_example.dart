@@ -13,15 +13,18 @@ class GradientExample extends StatelessWidget {
           children: [
             GradientBox(
               title: "Linear Gradient",
-              gradient: GradientExtensions.createLinearGradient(Colors.blue, Colors.purple),
+              gradient: GradientExtensions.createLinearGradient(
+                  Colors.blue, Colors.purple),
             ),
             GradientBox(
               title: "Radial Gradient",
-              gradient: GradientExtensions.createRadialGradient(Colors.orange, Colors.red),
+              gradient: GradientExtensions.createRadialGradient(
+                  Colors.orange, Colors.red),
             ),
             GradientBox(
               title: "Sweep Gradient",
-              gradient: GradientExtensions.createSweepGradient(Colors.green, Colors.blue),
+              gradient: GradientExtensions.createSweepGradient(
+                  Colors.green, Colors.blue),
             ),
             GradientBox(
               title: "Multi-Color Linear Gradient",
@@ -46,7 +49,8 @@ class GradientBox extends StatelessWidget {
   final String title;
   final Gradient gradient;
 
-  const GradientBox({Key? key, required this.title, required this.gradient}) : super(key: key);
+  const GradientBox({Key? key, required this.title, required this.gradient})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

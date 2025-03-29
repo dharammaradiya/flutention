@@ -16,21 +16,24 @@ class NavigationExample extends StatelessWidget {
               child: Text('Push Unnamed Route'),
             ),
             ElevatedButton(
-              onPressed: () =>
-                  context.pushNamed('/secondForNavigation', arguments: 'Hello from Home!'),
+              onPressed: () => context.pushNamed('/secondForNavigation',
+                  arguments: 'Hello from Home!'),
               child: Text('Push Named Route with Arguments'),
             ),
             ElevatedButton(
-              onPressed: () => context.pushWithTransition(SecondScreenForNavigation(),
+              onPressed: () => context.pushWithTransition(
+                  SecondScreenForNavigation(),
                   transitionType: TransitionType.slide),
               child: Text('Push with Custom Transition'),
             ),
             ElevatedButton(
-              onPressed: () => context.pushReplacement(SecondScreenForNavigation()),
+              onPressed: () =>
+                  context.pushReplacement(SecondScreenForNavigation()),
               child: Text('Push Replacement'),
             ),
             ElevatedButton(
-              onPressed: () => context.pushAndRemoveUntil(SecondScreenForNavigation()),
+              onPressed: () =>
+                  context.pushAndRemoveUntil(SecondScreenForNavigation()),
               child: Text('Push & Remove Until'),
             ),
             ElevatedButton(
@@ -41,14 +44,15 @@ class NavigationExample extends StatelessWidget {
                     content: Text('Click OK to return data'),
                     actions: [
                       TextButton(
-                        onPressed: () => context.popWithResult('Dialog Result!'),
+                        onPressed: () =>
+                            context.popWithResult('Dialog Result!'),
                         child: Text('OK'),
                       ),
                     ],
                   ),
                 );
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: Text('Dialog Result: $result')));
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Dialog Result: $result')));
               },
               child: Text('Show Dialog'),
             ),
@@ -63,15 +67,16 @@ class NavigationExample extends StatelessWidget {
                       children: [
                         Text('This is a Bottom Sheet'),
                         ElevatedButton(
-                          onPressed: () => context.popWithResult('Bottom Sheet Closed!'),
+                          onPressed: () =>
+                              context.popWithResult('Bottom Sheet Closed!'),
                           child: Text('Close'),
                         ),
                       ],
                     ),
                   ),
                 );
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: Text('Bottom Sheet Result: $result')));
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Bottom Sheet Result: $result')));
               },
               child: Text('Show Bottom Sheet'),
             ),

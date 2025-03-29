@@ -56,7 +56,6 @@ class CustomTextField extends StatelessWidget {
     this.enabledBorderColor,
     this.errorBorderColor,
     this.borderWidth = 1.0,
-
     this.borderRadius,
   });
 

@@ -15,7 +15,8 @@ class NavigationTransitionExample extends StatelessWidget {
             title: Text(transitions[index].toString().split('.').last),
             onTap: () {
               context.pushWithTransition(
-                DetailScreen(title: transitions[index].toString().split('.').last),
+                DetailScreen(
+                    title: transitions[index].toString().split('.').last),
                 transitionType: transitions[index],
               );
             },

@@ -170,7 +170,11 @@ extension IntExtensions on int {
 
   // Get the sum of digits in the integer
   int get sumOfDigits {
-    return this.toString().split('').map((e) => int.parse(e)).reduce((a, b) => a + b);
+    return this
+        .toString()
+        .split('')
+        .map((e) => int.parse(e))
+        .reduce((a, b) => a + b);
   }
 
   // Check if the integer is a palindrome

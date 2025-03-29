@@ -12,4 +12,3 @@ export 'data types extensions/string_extension.dart';
 export 'date time extensions/date_time_extensions.dart';
 export 'gradient extension/gradient_extension.dart';
 export 'widget extension/spacing_extension.dart';
-

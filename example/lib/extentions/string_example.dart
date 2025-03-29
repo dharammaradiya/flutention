@@ -2,7 +2,8 @@ import 'package:flutention/flutention.dart';
 import 'package:flutter/material.dart';
 
 class StringExample extends StatelessWidget {
-  final String sampleText = "hello_world ExampleString 123@example.com 12345 <b>Bold</b>";
+  final String sampleText =
+      "hello_world ExampleString 123@example.com 12345 <b>Bold</b>";
 
   @override
   Widget build(BuildContext context) {

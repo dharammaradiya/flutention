@@ -19,12 +19,14 @@ extension NavigationExtension on BuildContext {
 
   /// Push a new screen with a custom transition
   void pushWithTransition(Widget page,
-      {TransitionType transitionType = TransitionType.fade, RouteSettings? settings}) {
+      {TransitionType transitionType = TransitionType.fade,
+      RouteSettings? settings}) {
     Navigator.push(
       this,
       transitionType.customTransitionPageRoute(
         page,
-        settings: settings ?? RouteSettings(name: ModalRoute.of(this)?.settings.name),
+        settings:
+            settings ?? RouteSettings(name: ModalRoute.of(this)?.settings.name),
       ),
     );
   }
@@ -46,12 +48,14 @@ extension NavigationExtension on BuildContext {
 
   /// Replace current screen with a new screen with custom transition
   void pushReplacementWithTransition(Widget page,
-      {TransitionType transitionType = TransitionType.fade, RouteSettings? settings}) {
+      {TransitionType transitionType = TransitionType.fade,
+      RouteSettings? settings}) {
     Navigator.pushReplacement(
       this,
       transitionType.customTransitionPageRoute(
         page,
-        settings: settings ?? RouteSettings(name: ModalRoute.of(this)?.settings.name),
+        settings:
+            settings ?? RouteSettings(name: ModalRoute.of(this)?.settings.name),
       ),
     );
   }
@@ -78,12 +82,14 @@ extension NavigationExtension on BuildContext {
   }
 
   void pushAndRemoveUntilWithTransition(Widget page,
-      {TransitionType transitionType = TransitionType.fade, RouteSettings? settings}) {
+      {TransitionType transitionType = TransitionType.fade,
+      RouteSettings? settings}) {
     Navigator.pushAndRemoveUntil(
       this,
       transitionType.customTransitionPageRoute(
         page,
-        settings: settings ?? RouteSettings(name: ModalRoute.of(this)?.settings.name),
+        settings:
+            settings ?? RouteSettings(name: ModalRoute.of(this)?.settings.name),
       ),
       (route) => false, // Removes all previous routes
     );

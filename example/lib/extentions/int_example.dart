@@ -1,7 +1,6 @@
 import 'package:flutention/flutention.dart';
 import 'package:flutter/material.dart';
 
-
 class IntExample extends StatefulWidget {
   @override
   _IntExampleState createState() => _IntExampleState();
@@ -39,7 +38,8 @@ class _IntExampleState extends State<IntExample> {
                 onSubmitted: updateNumber,
               ),
               SizedBox(height: 20),
-              Text('Number: $number', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+              Text('Number: $number',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               Divider(),
               _buildInfoTile('Even', number.isEven),
               _buildInfoTile('Odd', number.isOdd),

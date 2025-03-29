@@ -23,7 +23,8 @@ class CustomTextFieldExample extends StatelessWidget {
                 errorBorderColor: Colors.red,
                 borderWidth: 2.0,
                 borderRadius: BorderRadius.circular(12),
-                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 cursorColor: Colors.green,
                 textStyle: const TextStyle(fontSize: 18, color: Colors.black),
                 onChanged: (value) {

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
-extension ListAnimationExtension on Widget{
-    Widget listAnimation({
+extension ListAnimationExtension on Widget {
+  Widget listAnimation({
     required int position,
     double? verticalOffset,
     double? horizontalOffset,
